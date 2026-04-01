@@ -1,0 +1,77 @@
+{
+    "kind": "collectionType",
+    "collectionName": "products",
+    "info": {
+        "singularName": "product",
+        "pluralName": "products",
+        "displayName": "Product"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "productCode": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "productName": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "finalSpeedInMbps": {
+            "type": "integer",
+            "required": true,
+            "min": 1
+        },
+        "originalSpeedInMbps": {
+            "type": "integer"
+        },
+        "originalPrice": {
+            "type": "integer",
+            "required": true
+        },
+        "promoPrice": {
+            "type": "integer"
+        },
+        "billingCycle": {
+            "type": "enumeration",
+            "required": true,
+            "default": "Bulanan",
+            "enum": [
+                "Bulanan",
+                "Tahunan",
+                "Promo"
+            ]
+        },
+        "priceHint": {
+            "type": "string",
+            "required": true
+        },
+        "thumbnail": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "productCategories": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::product-category.product-category"
+        },
+        "benefits": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::product-benefit.product-benefit"
+        },
+        "regionals": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::regional.regional"
+        }
+    }
+}

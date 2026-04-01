@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "regional_banners",
+  "info": {
+    "singularName": "regional-banner",
+    "pluralName": "regional-banners",
+    "displayName": "Banner Regional"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altname": {
+      "type": "string",
+      "required": true
+    },
+    "regional": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::regional.regional"
+    }
+  }
+}

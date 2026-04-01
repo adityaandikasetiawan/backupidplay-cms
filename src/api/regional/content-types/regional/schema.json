@@ -1,0 +1,24 @@
+{
+    "kind": "collectionType",
+    "collectionName": "regionals",
+    "info": {
+        "singularName": "regional",
+        "pluralName": "regionals",
+        "displayName": "Regional"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {
+        "content-manager": {
+            "mainField": "region"
+        }
+    },
+    "attributes": {
+        "region": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        }
+    }
+}

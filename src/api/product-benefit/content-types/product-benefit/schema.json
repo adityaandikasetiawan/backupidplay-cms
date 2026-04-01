@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_benefits",
+  "info": {
+    "singularName": "product-benefit",
+    "pluralName": "product-benefits",
+    "displayName": "Product Benefit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "umum",
+      "enum": [
+        "umum",
+        "ott"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

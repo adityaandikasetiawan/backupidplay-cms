@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "national_banners",
+  "info": {
+    "singularName": "national-banner",
+    "pluralName": "national-banners",
+    "displayName": "Banner National"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altname": {
+      "type": "string"
+    },
+    "listNumber": {
+      "type": "integer",
+      "required": false,
+      "unique": false
+    }
+  }
+}
