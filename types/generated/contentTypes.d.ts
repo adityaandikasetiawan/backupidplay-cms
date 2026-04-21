@@ -696,7 +696,9 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::product-benefit.product-benefit'
     >;
-    billingCycle: Schema.Attribute.Enumeration<['Bulanan', 'Tahunan']> &
+    billingCycle: Schema.Attribute.Enumeration<
+      ['Bulanan', 'Tahunan', 'Promo']
+    > &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Bulanan'>;
     createdAt: Schema.Attribute.DateTime;

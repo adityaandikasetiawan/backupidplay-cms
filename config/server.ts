@@ -1,7 +1,7 @@
 export default ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
-  url: env('PUBLIC_URL', 'https://cms.idplay.co.id'),
+  url: env('PUBLIC_URL', 'https://idplay.co.id'),
   proxy: true,
   app: {
     keys: env.array('APP_KEYS'),
